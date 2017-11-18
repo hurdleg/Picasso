@@ -49,6 +49,7 @@ public class PlanetAdapter extends RecyclerView.Adapter<PlanetAdapter.ViewHolder
         String url = PHOTOS_BASE_URL + aPlanet.getPlanetId() + "/image";
         Picasso.with(mContext)
                 .load(url)
+                .error(R.drawable.noimagefound)
                 .fit()
                 .into(holder.imageView);
 
